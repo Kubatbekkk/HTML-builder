@@ -1,9 +1,9 @@
 const path = require('path')
-const fs = require('fs')
+const { createWriteStream } = require('fs')
 const { stdin, stdout, exit } = require('process')
 
 const filePath = path.join(__dirname, 'text.txt')
-const writer = fs.createWriteStream(filePath)
+const writer = createWriteStream(filePath)
 
 stdout.write(`Нажмите Ctrl + C для выхода или введите exit
               Введите текст: `)
